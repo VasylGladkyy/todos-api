@@ -11,6 +11,9 @@ gem 'puma', '~> 4.1'
 
 gem 'rubocop-rails', require: false
 
+gem 'factory_bot_rails'
+gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
+
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 4.0.1'
@@ -24,8 +27,6 @@ end
 
 group :test do
   gem 'database_cleaner-active_record'
-  gem 'factory_bot_rails'
-  gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
   gem 'shoulda-matchers', '~> 4.0'
 end
 
