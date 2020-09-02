@@ -10,6 +10,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+gem 'jwt', '~> 1.5', '>= 1.5.4'
 
 gem 'rubocop-rails', require: false
 
