@@ -19,6 +19,9 @@ Layout/LineLength:
 Rails/FilePath:
   Enabled: false
 
+Rails/InverseOf:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 
