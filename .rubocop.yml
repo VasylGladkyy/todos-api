@@ -6,6 +6,10 @@ AllCops:
     - "node_modules/**/*"
     - "vendor/**/*"
 
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+
 Layout/LineLength:
   Max: 90
   IgnoredPatterns:
