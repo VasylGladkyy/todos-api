@@ -1,0 +1,21 @@
+require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - "bin/*"
+    - "node_modules/**/*"
+    - "vendor/**/*"
+
+Layout/LineLength:
+  Max: 90
+  IgnoredPatterns:
+    - '\A(\s)*#'
+
+Rails/FilePath:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
