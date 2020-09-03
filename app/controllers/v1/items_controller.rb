@@ -1,5 +1,5 @@
 module V1
-  class ItemsController < ApplicationController
+  class ItemsController < V1::BaseController
     before_action :set_todo
     before_action :set_todo_item, only: %i[show update destroy]
 

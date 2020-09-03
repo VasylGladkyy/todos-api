@@ -9,6 +9,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+gem 'jwt', '~> 1.5', '>= 1.5.4'
+
 gem 'rubocop-rails', require: false
 
 gem 'factory_bot_rails'
@@ -29,6 +32,7 @@ end
 group :test do
   gem 'database_cleaner-active_record'
   gem 'shoulda-matchers', '~> 4.0'
+  gem 'simplecov', require: false
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
