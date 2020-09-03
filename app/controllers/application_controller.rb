@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::API
   include Exceptions
 
+  attr_reader :current_user
+
+  before_action :authorize_request
+
   rescue_from ActiveRecord::RecordNotFound,    with: :not_found_request
   rescue_from ActiveRecord::RecordInvalid,     with: :four_twenty_two_request
   rescue_from Exceptions::AuthenticationError, with: :unauthorized_request
@@ -8,6 +12,10 @@ class ApplicationController < ActionController::API
   rescue_from Exceptions::InvalidToken,        with: :four_twenty_two_request
 
   private
+
+  def authorize_request
+    @current_user = AuthorizeApiRequest.new(request.headers).call[:user]
+  end
 
   def json_response(object, status = :ok)
     render json: object, status: status

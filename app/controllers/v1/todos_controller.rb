@@ -3,7 +3,7 @@ module V1
     before_action :set_todo, only: %i[show update destroy]
 
     def index
-      @todos = Todo.all
+      @todos = current_user.todos
       json_response(@todos)
     end
 
@@ -12,7 +12,7 @@ module V1
     end
 
     def create
-      @todo = Todo.create!(todo_params)
+      @todo = current_user.todos.create!(todo_params)
       json_response(@todo, :created)
     end
 
