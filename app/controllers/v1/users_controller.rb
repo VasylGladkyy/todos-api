@@ -1,5 +1,5 @@
 module V1
-  class UsersController < ApplicationController
+  class UsersController < V1::BaseController
     skip_before_action :authorize_request, only: :create
 
     def create

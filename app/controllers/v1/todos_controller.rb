@@ -1,5 +1,5 @@
 module V1
-  class TodosController < ApplicationController
+  class TodosController < V1::BaseController
     before_action :set_todo, only: %i[show update destroy]
 
     def index

@@ -1,5 +1,5 @@
 module V1
-  class AuthenticationController < ApplicationController
+  class AuthenticationController < V1::BaseController
     skip_before_action :authorize_request, only: :authenticate
 
     def authenticate
