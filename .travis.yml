@@ -1,0 +1,16 @@
+dist: xenial
+language: ruby
+rvm:
+  - 2.7.1
+cache:
+  bundler: true
+install:
+  - bundle
+before_script:
+  - rake db:setup
+script:
+  - bundle exec rspec
+  - rubocop --require rubocop-rails
+services:
+  - postgresql
+  - xvfb
