@@ -14,7 +14,7 @@ class User < ApplicationRecord
 
   has_many :todos, foreign_key: :created_by, dependent: :destroy
 
-  validates :name, presence: true
-  validates :email, presence: true
-  validates :password_digest, presence: true
+  validates :name, presence: true, length: { maximum: 50 }
+  validates :email, presence: true, length: { maximum: 255 }, email: true
+  validates :password, presence: true
 end

@@ -36,7 +36,7 @@ RSpec.describe 'Users', type: :request do
           .to eq(
             "Validation failed: Password can't be blank, "\
             "Name can't be blank, Email can't be blank, "\
-            "Password digest can't be blank"
+            'Email is not valid email'
           )
       end
     end
