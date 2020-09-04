@@ -6,6 +6,12 @@ RSpec.describe Item, type: :model do
   end
 
   describe 'Validations' do
-    it { is_expected.to validate_presence_of(:name) }
+    context 'Presence validation' do
+      it { is_expected.to validate_presence_of(:name) }
+    end
+
+    context 'Length validation' do
+      it { is_expected.to validate_length_of(:name).is_at_most(50) }
+    end
   end
 end

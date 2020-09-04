@@ -11,6 +11,6 @@
 class Todo < ApplicationRecord
   has_many :items, dependent: :destroy
 
-  validates :title, presence: true
+  validates :title, presence: true, length: { maximum: 255 }
   validates :created_by, presence: true
 end
