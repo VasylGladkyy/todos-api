@@ -13,6 +13,9 @@ gem 'puma', '~> 4.1'
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem 'jwt', '~> 1.5', '>= 1.5.4'
 
+gem 'apitome', github: 'jejacks0n/apitome'
+gem 'rspec_api_documentation'
+
 gem 'rubocop-rails', require: false
 
 gem 'factory_bot_rails'

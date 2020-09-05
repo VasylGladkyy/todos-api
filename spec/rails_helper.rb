@@ -6,6 +6,7 @@ require File.expand_path('../config/environment', __dir__)
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 require 'simplecov'
+require 'rspec_api_documentation/dsl'
 
 SimpleCov.start
 
@@ -65,4 +66,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  RspecApiDocumentation.configure do |doc_config|
+    doc_config.format = :json
+  end
 end
