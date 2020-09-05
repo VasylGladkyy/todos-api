@@ -66,4 +66,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  RspecApiDocumentation.configure do |doc_config|
+    doc_config.format = :json
+  end
 end
